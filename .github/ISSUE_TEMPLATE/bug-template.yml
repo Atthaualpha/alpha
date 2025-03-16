@@ -2,7 +2,7 @@ name: Reporte de bug
 description: Reportar un comportamiento no esperado.
 title: "[Bug]: "
 labels: ["bug"]
-projects: ["clips"]
+projects: ["Atthaualpha/1"]
 body:
   - type: markdown
     attributes:
