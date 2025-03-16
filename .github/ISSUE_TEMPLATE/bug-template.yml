@@ -1,64 +1,30 @@
-name: Bug Report
-description: File a bug report.
+name: Reporte de bug
+description: Reportar un comportamiento no esperado.
 title: "[Bug]: "
-labels: ["bug", "triage"]
-projects: ["octo-org/1", "octo-org/44"]
-assignees:
-  - octocat
+labels: ["bug"]
+projects: ["clips"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
+        Gracias por tomar el tiempo para reportar este bug!
   - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Qué pasó?
+      description: Cuentanos que viste y cual es el resultado que esperabas!
+      value: ""
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: impact-level
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: Nivel de Impacto
+      description: Cúal es el nivel que impacto que consideras para este bug?
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+       - HIGH (Mejora de funcionalidad, rendimiento o seguridad que compromete la aplicación)
+       - MEDIUM (Mejora que no compromete la aplicación)
+       - LOW (Mejora a nivel de código que no afecta al usuario)
       default: 0
     validations:
       required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
