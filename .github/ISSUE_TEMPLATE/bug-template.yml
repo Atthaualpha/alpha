@@ -7,11 +7,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        Gracias por tomar el tiempo para reportar este bug!
+        Gracias por tomarte el tiempo para reportar este bug!
   - type: textarea
     id: what-happened
     attributes:
-      label: Qué pasó?
+      label: ¿Qué pasó?
       description: Cuentanos que viste y cual es el resultado que esperabas!
       value: "..."
     validations:
@@ -22,9 +22,9 @@ body:
       label: Nivel de Impacto
       description: Cúal es el nivel que impacto que consideras para este bug?
       options:
-       - HIGH (Mejora de funcionalidad, rendimiento o seguridad que compromete la aplicación)
-       - MEDIUM (Mejora que no compromete la aplicación)
-       - LOW (Mejora a nivel de código que no afecta al usuario)
+       - HIGH (Error bloqueante en la experienca o compromete el rendimiento o seguridad de la aplicación)
+       - MEDIUM (Error que afecta al usuario, pero no es bloqueante en su experiencia)
+       - LOW (Error que no afecta la experiencia del usuario)
       default: 0
     validations:
       required: true
