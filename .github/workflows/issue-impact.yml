@@ -4,10 +4,24 @@ on:
     types:
       - opened
 jobs:
-  comment:
+  add-impact-level:
     runs-on: ubuntu-latest
     steps:
-      - run: gh issue comment $ISSUE --body "Thank you for opening this issue!"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUE: ${{ github.event.issue.html_url }}
+      - name: Add label
+        uses: actions/github-script@v5
+        with:
+           github-token: ${{ secrets.GITHUB_TOKEN }}
+           script: |
+             console.log(context.payload)
+             const issue = context.payload.issue
+             const body = issue.body
+             console.log(body)
+             const owner = context.repo.owner;
+             const repo = context.repo.repo;
+             await github.rest.issues.addLabels({
+                issue_number: issue.number,
+                owner,
+                repo,
+                labels: ['high']
+              });
+           
