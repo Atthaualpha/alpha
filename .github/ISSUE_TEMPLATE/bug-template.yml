@@ -29,18 +29,18 @@ body:
     validations:
       required: true
   - type: dropdown
-  id: application
-  attributes:
-    label: Aplicación relacionada
-    description: Este bug pertenece a alguna aplicación en especifico?
-    options:
-     - shorts-nordic-viewer
-     - shorts-nordic-creator     
-     - shorts-api
-     - shorts-feed-api
-     - shorts-feed-middleware
-     - shorts-nordic-moderator
-     - shorts-creators-api
-    default: 0
-  validations:
-    required: true
+    id: application
+    attributes:
+      label: Aplicación relacionada
+      description: Este bug pertenece a alguna aplicación en especifico?
+      options:
+      - shorts-nordic-viewer
+      - shorts-nordic-creator     
+      - shorts-api
+      - shorts-feed-api
+      - shorts-feed-middleware
+      - shorts-nordic-moderator
+      - shorts-creators-api
+      default: 0
+    validations:
+      required: true
