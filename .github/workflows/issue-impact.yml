@@ -13,7 +13,7 @@ jobs:
            github-token: ${{ secrets.GITHUB_TOKEN }}
            script: |
              const issue = context.payload.issue
-             const body = issue.body||'###'
+             const body = issue.body||'\n###'             
              const owner = context.repo.owner;
              const repo = context.repo.repo;
 
