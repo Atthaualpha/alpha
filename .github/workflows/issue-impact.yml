@@ -19,6 +19,7 @@ jobs:
 
              function extractSection(body, sectionTitle) {
               const regex = new RegExp(`${sectionTitle}\s+([\s\S]*?)(?=\n###|\Z)`, 'i');
+              console.log(regex)
               const match = body.match(regex);
               return match ? match[0].replace(`## ${sectionTitle}`, '').trim() : null;
              }
