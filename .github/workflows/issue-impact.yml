@@ -21,7 +21,6 @@ jobs:
               const regex = new RegExp(`${sectionTitle}\\s+([\\s\\S]*?)(?=\n###|\\Z)`, 'i');
               console.log(regex)
               const match = body.match(regex);
-              console.log(match)
               return match ? match[1].trim() : null;
              }
 
