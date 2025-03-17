@@ -13,7 +13,11 @@ body:
     attributes:
       label: ¿Qué pasó?
       description: Cuentanos que viste y cual es el resultado que esperabas!
-      value: "..."
+      value: |
+       ### Contexto
+
+
+       ### Resultado esperado
     validations:
       required: true
   - type: dropdown
