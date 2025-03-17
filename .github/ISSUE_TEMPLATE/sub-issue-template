@@ -1,0 +1,14 @@
+name: Crear sub-issue 
+description: Crear sub-issue como tarea
+title: "[Task]: "
+labels: []
+projects: ["Atthaualpha/3"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+      description: Describe el detalle de la tarea!
+      value: "..."
+    validations:
+      required: true
