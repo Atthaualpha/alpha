@@ -24,7 +24,7 @@ jobs:
              }
 
              const impactLevel = extractSection(body, 'Nivel de Impacto');
-             const application = extractSection(body, 'Aplicación relacionada');
+             const application = extractSection(body, 'Aplicacion Relacionada');
              console.log(application)
              let labels = []
              if (impactLevel != null) {
