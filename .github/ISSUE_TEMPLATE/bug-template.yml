@@ -43,4 +43,4 @@ body:
       - shorts-creators-api
       default: 0
     validations:
-      required: true
+      required: false
