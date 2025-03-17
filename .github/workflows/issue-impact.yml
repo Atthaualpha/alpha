@@ -16,14 +16,25 @@ jobs:
              const body = issue.body
              const owner = context.repo.owner;
              const repo = context.repo.repo;
-             let labels = []
-             if (body.includes('HIGH (')) {
-                labels = ['high']
-             } else if (body.includes('MEDIUM (')) {
-                labels = ['medium']
-             } else if (body.includes('LOW (')) {
-                labels = ['low']
+
+             function extractSection(body, sectionTitle) {
+              const regex = new RegExp(`${sectionTitle}\s+([\s\S]*?)(?=\n###|\Z)`, 'i');
+              const match = body.match(regex);
+              return match ? match[0].replace(`## ${sectionTitle}`, '').trim() : null;
              }
+
+             const impactLevel = extractSection(body, 'Nivel de Impacto');
+             const application = extractSection(body, 'Aplicación relacionada');
+            
+             let labels = []
+             if (!impactLevel) {
+                labels.push(impactLevel.toLowerCase());
+             }
+
+             if (!application && application !== 'None') {
+                labels.push(application.toLowerCase());
+             }
+             
              await github.rest.issues.addLabels({
                 issue_number: issue.number,
                 owner,
