@@ -25,7 +25,8 @@ jobs:
 
              const impactLevel = extractSection(body, 'Nivel de Impacto');
              const application = extractSection(body, 'Aplicación relacionada');
-            
+             console.log(impactLevel)
+             console.log(application)
              let labels = []
              if (!impactLevel) {
                 labels.push(impactLevel.toLowerCase());
