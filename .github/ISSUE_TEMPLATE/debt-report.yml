@@ -13,7 +13,8 @@ body:
     attributes:
       label: Descripción
       description: Cuentanos viste que se puede mejorar o nos hace falta!
-      value: "..."
+      value: |
+       ### Contexto
     validations:
       required: true
   - type: dropdown
