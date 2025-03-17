@@ -12,16 +12,22 @@ jobs:
         with:
            github-token: ${{ secrets.GITHUB_TOKEN }}
            script: |
-             console.log(context.payload)
              const issue = context.payload.issue
              const body = issue.body
-             console.log(body)
              const owner = context.repo.owner;
              const repo = context.repo.repo;
+             let labels = []
+             if (body.includes('HIGH (')) {
+                labels = ['high']
+             } else if (body.includes('MEDIUM (')) {
+                labels = ['medium']
+             } else if (body.includes('LOW (')) {
+                labels = ['low']
+             }
              await github.rest.issues.addLabels({
                 issue_number: issue.number,
                 owner,
                 repo,
-                labels: ['high']
+                labels
               });
            
