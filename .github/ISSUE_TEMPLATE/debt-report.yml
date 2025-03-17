@@ -1,0 +1,45 @@
+name: Reportar deuda tecnica
+description: Reportar deuda tecnica para ayudarnos a mejorar
+title: "[Debt]: "
+labels: ["debt"]
+projects: ["Atthaualpha/3"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por tomarte el tiempo para reportar esta deuda tecnica!
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+      description: Cuentanos viste que se puede mejorar o nos hace falta!
+      value: "..."
+    validations:
+      required: true
+  - type: dropdown
+    id: impact-level
+    attributes:
+      label: Nivel de Impacto
+      description: Cúal es el nivel que impacto que consideras para esta deuda?
+      options:
+       - HIGH (Mejora de funcionalidad, rendimiento o seguridad que compromete la aplicación)
+       - MEDIUM (Mejora que no compromete el funcionamiento la aplicación a corto plazo)
+       - LOW (Mejora a nivel de código que no afecta al usuario o la aplicación)
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: application
+    attributes:
+      label: Aplicacion Relacionada
+      description: Este bug se relaciona con alguna aplicación en especifico?
+      options:
+      - shorts-nordic-viewer
+      - shorts-nordic-creator     
+      - shorts-api
+      - shorts-feed-api
+      - shorts-feed-middleware
+      - shorts-nordic-moderator
+      - shorts-creators-api
+    validations:
+      required: false
