@@ -32,7 +32,7 @@ body:
     id: application
     attributes:
       label: Aplicación relacionada
-      description: Este bug pertenece a alguna aplicación en especifico?
+      description: Este bug se relaciona con alguna aplicación en especifico?
       options:
       - shorts-nordic-viewer
       - shorts-nordic-creator     
