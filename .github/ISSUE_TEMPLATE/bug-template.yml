@@ -15,7 +15,19 @@ body:
       description: Cuentanos que viste y cual es el resultado que esperabas!
       value: "..."
     validations:
-      required: true  
+      required: true
+  - type: dropdown
+    id: impact-level
+    attributes:
+      label: Nivel de Impacto
+      description: Cúal es el nivel que impacto que consideras para este bug?
+      options:
+       - HIGH (Error bloqueante en la experienca o compromete el rendimiento o seguridad de la aplicación)
+       - MEDIUM (Error que afecta al usuario, pero no es bloqueante en su experiencia)
+       - LOW (Error que no afecta la experiencia del usuario)
+      default: 0
+    validations:
+      required: true
   - type: dropdown
     id: application
     attributes:
@@ -31,15 +43,3 @@ body:
       - shorts-creators-api
     validations:
       required: false
-  - type: dropdown
-    id: impact-level
-    attributes:
-      label: Nivel de Impacto
-      description: Cúal es el nivel que impacto que consideras para este bug?
-      options:
-       - HIGH (Error bloqueante en la experienca o compromete el rendimiento o seguridad de la aplicación)
-       - MEDIUM (Error que afecta al usuario, pero no es bloqueante en su experiencia)
-       - LOW (Error que no afecta la experiencia del usuario)
-      default: 0
-    validations:
-      required: true
