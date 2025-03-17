@@ -1,4 +1,4 @@
-name: Reporte de bug
+name: Reportar bug
 description: Reportar un comportamiento no esperado.
 title: "[Bug]: "
 labels: ["bug"]
