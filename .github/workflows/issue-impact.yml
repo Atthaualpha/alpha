@@ -29,11 +29,11 @@ jobs:
              console.log(impactLevel)
              console.log(application)
              let labels = []
-             if (!impactLevel) {
+             if (impactLevel != null) {
                 labels.push(impactLevel.toLowerCase());
              }
 
-             if (!application && application !== 'None') {
+             if (application !== null && application !== 'None') {
                 labels.push(application.toLowerCase());
              }
              
