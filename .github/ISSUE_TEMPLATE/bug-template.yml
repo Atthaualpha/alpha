@@ -43,3 +43,13 @@ body:
       default: 0
     validations:
       required: true
+  - type: dropdown
+    id: awdawd-level
+    attributes:
+      label: awdawdawd
+      description: awwad
+      options:
+       - 1
+      default: 0
+    validations:
+      required: false
