@@ -25,7 +25,7 @@ jobs:
 
              const impactLevel = extractSection(body, 'Nivel de Impacto');
              const application = extractSection(body, 'Aplicación relacionada');
-             
+             console.log(application)
              let labels = []
              if (impactLevel != null) {
                 labels.push(impactLevel.split(" ")[0].toLowerCase());
@@ -34,7 +34,7 @@ jobs:
              if (application !== null && application !== 'None') {
                 labels.push(application.toLowerCase());
              }
-             
+             console.log(labels)
              await github.rest.issues.addLabels({
                 issue_number: issue.number,
                 owner,
