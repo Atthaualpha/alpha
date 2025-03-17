@@ -31,7 +31,7 @@ body:
   - type: dropdown
     id: application
     attributes:
-      label: Aplicación relacionada
+      label: Aplicacion Relacionada
       description: Este bug se relaciona con alguna aplicación en especifico?
       options:
       - shorts-nordic-viewer
