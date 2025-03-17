@@ -41,6 +41,5 @@ body:
       - shorts-feed-middleware
       - shorts-nordic-moderator
       - shorts-creators-api
-      default: 0
     validations:
       required: false
